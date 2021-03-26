@@ -86,7 +86,10 @@ let food = [{
   name: "Will eat anything!"
 }];  
 
-let randomIndex;
+let randomG;
+let randomN;
+let randomQ;
+let randomF;
 let animating = false;
 //let counter = 0;
 let pokefont;
@@ -174,18 +177,19 @@ animating = false;
 background(165,231,222);  
 //if (eggs[0]){  
   //randomIndex = int(random(eggs.length));
-  randomIndex = int(random(gender.length));
-  randomIndex = int(random(nature.length));
-  randomIndex = int(random(quirk.length));
+  randomG = int(random(gender.length));
+  randomN = int(random(nature.length));
+  randomQ = int(random(quirk.length));
+  randomF = int(random(food.length));
   
   //console.log(eggs[randomIndex].name); 
   textSize(33);
   text("Congratulations!",width/2,95);
   textSize(20);
-  text(`${gender[randomIndex].name}`,width/2,460);
-  text(`${nature[randomIndex].name}`,width/2,495);
-  text(`${quirk[randomIndex].name}`,width/2,530);
-  text(`${food[randomIndex].name}`,width/2,565);
+  text(`${gender[randomG].name}`,width/2,460);
+  text(`${nature[randomN].name}`,width/2,495);
+  text(`${quirk[randomQ].name}`,width/2,530);
+  text(`${food[randomF].name}`,width/2,565);
   //text("You hatched " + `${eggs[randomIndex].name}` + "!",40,100);
   //eggs.splice(randomIndex, 1);
   image(eggend, width/2, height/2);
